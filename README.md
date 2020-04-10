@@ -22,17 +22,28 @@ One unit in the game can only have 0 or 1 mine. The size of the board and the nu
  
 
 ## 3. Features
-### 3.1 Multiple Difficulty Levels
-The player can challenge themselves by playing a higher difficulty level with a broader board and more mines!
+### 3.1 Interactive interface of the game
+The player acts by entering a coordinate in the board with the type of judgment (whether there are mines or not), and the program outputs an updated board based on the player's input.
+
+(Requirement 4: File input/output)
+
+### 3.2 Update to the board.
+
+After reading the coordinates entered by the player, the board is automatically updated recursively, using dynamic memory to store the state each time to save space.
 
 (Requirement 3: Dynamic memory management)
 
-### 3.2 Time attack and leaderboard
-Clock's ticking during the gameplay. You can take a look at the leaderboard and beat all other players in the time attack!
-
-(Requirement 2: Data structures for storing game status; 4: File input/output; 5: Program codes in multiple files)
-  
 ### 3.3 Random mine units distribution
-An essential feature in any minesweeping game, mines' positions will change every time the game starts.
+An essential feature in any minesweeping game. The program will randomly generate a certain number of mines depending on the difficulty chosen by the player, and mines' positions will change every time the game starts.
   
 (Requirement 1: Generation of random game sets or events)
+
+### 3.4 Multiple Difficulty Levels
+The player can challenge themselves by playing a higher difficulty level with a broader board and more mines!
+
+(5: Program codes in multiple files)
+
+### 3.5 Time attack and leaderboard
+Clock's ticking during the gameplay. You can take a look at the leaderboard and beat all other players in the time attack!
+
+(Requirement 2: Data structures for storing game status)
