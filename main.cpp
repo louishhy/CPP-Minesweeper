@@ -21,7 +21,7 @@ int M,Num;
 
 void menu();//Print menu
 void initialize();//Initialize each array
-void Player_operation(clock_t& start_time, clock_t& end_time, double& time_record);
+void Player_operation(time_t& start_time, time_t& end_time, double& time_record);
 void display_mine_board();
 void display_game_board();
 void generate(int mine_num);//Random mine generation
@@ -33,14 +33,14 @@ int sweep(int x,int y);
 int main()
 {
 	initialize();
-	clock_t starting_time, ending_time;
+	time_t starting_time, ending_time;
 	double time_record;
 	Player_operation(starting_time, ending_time, time_record);
 	return 0;
 }
 
 //The function for the whole playing process. Detailed documentation is noted in function body below.
-void Player_operation(clock_t& start_time, clock_t& end_time, double& time_record)
+void Player_operation(time_t& start_time, time_t& end_time, double& time_record)
 {
 	menu(); //displays the menu
 	generate(Num);//Generate a mine board with Num mines
