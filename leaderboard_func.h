@@ -1,5 +1,5 @@
 #include <string>
-#include <ctime>
+#include <time.h>
 
 using namespace std;
 
@@ -9,7 +9,7 @@ using namespace std;
 
 //Functions for leaderboard and time attack function. For detailed documentation see leaderboard_func.cpp
 
-void time_calculation(clock_t& start, clock_t& end, double& time_interval, int flag );
+void time_calculation(time_t& start, time_t& end, double& time_interval, int flag );
 
 void write_leaderboard(string user_name, double time_record);
 
