@@ -1,20 +1,20 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <ctime>
+#include <time.h> 
 #include "leaderboard_func.h"
 
 using namespace std;
 
 //A stopwatch used to calculate the time consumed, flag 0 = start, flag 1 = end, directly modify the time-recording variable in main.cpp
-void time_calculation(clock_t& start, clock_t& end, double& time_interval, int flag ){       
+void time_calculation(time_t& start, time_t& end, double& time_interval, int flag ){       
 	if (flag==0){
-		start = clock();
+		start = time(NULL);
 	}
 	else if (flag == 1) {
-		end = clock();
-		cout << "Time used: " << (end - start) / (double)CLOCKS_PER_SEC << " seconds." <<endl;
-		time_interval = (end - start) / (double)CLOCKS_PER_SEC;
+		end = time(NULL);
+		cout << "Time used: " << (end - start) << " seconds." <<endl;
+		time_interval = (end - start) ;
 	}
 }
 
