@@ -211,18 +211,19 @@ int count_mine(int x,int y)
 	return tmp_num;
 }
 
+//Update the game board centered on (x,y), use 'vis' to avoid repeated searches
 void sweep_dfs(int x,int y,bool **vis)
 {
-	if(x<1||x>M||y<1||y>M) return;
+	if(x<1||x>M||y<1||y>M) return;//Exceede gameboard limit
 	if(mine_board[x][y]==1) return;
-	if(vis[x][y]) return;
-	vis[x][y]=1;
+	if(vis[x][y]) return;//Already has been searched
+	vis[x][y]=1;//Mark as searched
 	if(count_mine(x,y))
 	{
 		game_board[x][y]='0'+count_mine(x,y);
 		return;
-	}
-	game_board[x][y]='\0';
+	}//Find the location of mines around, update the board and stop searching
+	game_board[x][y]='\0';//No mines around this location, Continue searching around
 	sweep_dfs(x-1,y-1,vis);sweep_dfs(x,y-1,vis);sweep_dfs(x+1,y-1,vis);sweep_dfs(x-1,y,vis);
 	sweep_dfs(x+1,y,vis);sweep_dfs(x-1,y+1,vis);sweep_dfs(x,y+1,vis);sweep_dfs(x+1,y+1,vis);
 	return;
