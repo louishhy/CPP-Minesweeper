@@ -42,3 +42,28 @@ An essential feature in any minesweeping game. Players can customize the difficu
 Clock's ticking during the gameplay. You can take a look at the leaderboard and beat all other players in the time attack!
 
 (Requirement 4: File input/output; 5: Program codes in multiple files)
+
+
+## 4. Compilation and Execution Instructions
+(A video demonstration is attached in the repo.)
+
+### Compilation
+On linux environment, clone this repo, then change to the game directory.
+```bash
+git clone https://github.com/louishhy/CPP-Minesweeper
+cd CPP-Minesweeper
+```
+Use makefile to make the main executable.
+```bash
+make main
+```
+Run the executable.
+```bash
+./main
+```
+
+### Execution
+You are ready to play the game. Follow the instruction on the screen.
+- Type in to choose difficulty 
+- Use S or M command to sweep(reveal) or mark units.
+- If you win, the game will invite you to enter your name, and your time and name will be uploaded to the leaderboard for time attack challenges.
